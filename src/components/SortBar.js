@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 
-function SortBar() {
-  const [sortBy, setSortBy] = useState("health");
+function SortBar({ onSort }) {
+  const [selectedOption, setSelectedOption] = useState("");
 
   const handleSortChange = (event) => {
-    setSortBy(event.target.value);
+    const selectedValue = event.target.value;
+    setSelectedOption(selectedValue);
+    onSort(selectedValue);
   };
 
   return (
     <div>
-      <select value={sortBy} onChange={handleSortChange}>
+      <select value={selectedOption} onChange={handleSortChange}>
+        <option value="">Sort by...</option>
         <option value="health">Health</option>
         <option value="damage">Damage</option>
         <option value="armor">Armor</option>
