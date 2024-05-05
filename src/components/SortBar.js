@@ -1,18 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-function SortBar({ onSort }) {
-  const [selectedOption, setSelectedOption] = useState("");
-
-  const handleSortChange = (event) => {
-    const selectedValue = event.target.value;
-    setSelectedOption(selectedValue);
-    onSort(selectedValue);
-  };
-
+function SortBar({ handleSort }) {
   return (
     <div>
-      <select value={selectedOption} onChange={handleSortChange}>
-        <option value="">Sort by...</option>
+      <label htmlFor="sort-select">Sort by:</label>
+      <select id="sort-select" onChange={(e) => handleSort(e.target.value)}>
         <option value="health">Health</option>
         <option value="damage">Damage</option>
         <option value="armor">Armor</option>

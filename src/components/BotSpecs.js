@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import "./BotSpecs.css";
 import botData from "../db.json";
 
-function BotSpecs({ onEnlist, onBack }) {
+function BotSpecs() {
   const { id } = useParams();
   const [bot, setBot] = useState(null);
 
@@ -33,11 +33,15 @@ function BotSpecs({ onEnlist, onBack }) {
         <p>Updated At: {bot.updated_at}</p>
         <button className="enlistbtn">
           {" "}
-          <Link to="/enlist" className="enlistlink">Enlist</Link>
+          <Link to={`/enlist/${id}`} className="enlistlink">
+            Enlist
+          </Link>
         </button>
         <button className="backbtn">
           {" "}
-          <Link to="/"className="backlink">Back</Link>
+          <Link to="/" className="backlink">
+            Back
+          </Link>
         </button>
       </div>
     </div>
