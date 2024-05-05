@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./BotSpecs.css";
 import botData from "../db.json";
 
@@ -31,8 +31,14 @@ function BotSpecs({ onEnlist, onBack }) {
         <p>Bot Class: {bot.bot_class}</p>
         <p>Created At: {bot.created_at}</p>
         <p>Updated At: {bot.updated_at}</p>
-        <button className="enlistbtn">Enlist Bot</button>
-        <button className="backbtn">Back to List View</button>
+        <button className="enlistbtn">
+          {" "}
+          <Link to="/enlist" className="enlistlink">Enlist</Link>
+        </button>
+        <button className="backbtn">
+          {" "}
+          <Link to="/"className="backlink">Back</Link>
+        </button>
       </div>
     </div>
   );

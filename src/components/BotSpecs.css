@@ -7,19 +7,26 @@
 }
 
 button {
-    height: 40px;
-    width: auto;
-    padding: 6px;
+    padding: 8px;
     background-color: #333;
-    color: white;
-    border-radius: 20px;
+    border-radius: 15px;
+    width: 80px;
+    height: auto;
+    align-items: center;
 }
 
 .backbtn {
     margin-left: 20px;
 
 }
+
 .backbtn:hover,
-.enlistbtn:hover{
+.enlistbtn:hover {
     background-color: red;
+}
+
+.enlistlink,
+.backlink {
+    text-decoration: none;
+    color: white;
 }

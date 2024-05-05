@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BotList from "./components/BotList";
 import BotSpecs from "./components/BotSpecs";
-import BotCollection from "./components/BotCollection";
 
 function App() {
   return (
@@ -11,7 +10,8 @@ function App() {
         <Routes>
           <Route path="/" element={<BotList />} />
           <Route path="/bots/:id" element={<BotSpecs />} />
-          <Route path="/" element={<BotCollection />} />
+          {/* <Route path="/enlist" element={<enlist/>}/>
+          <Route path="/" element= */}
         </Routes>
       </Router>
     </div>
