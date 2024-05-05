@@ -1,0 +1,12 @@
+.botlist-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.botlist-item {
+    width: 400px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+}
